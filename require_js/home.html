@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Require JS</title>
+    
+</head>
+<body>
+    <center><h1><b>Use Case: Require JS</b></h1></center>
+    <!-- A module is different from a traditional script file in that it defines a well-scoped object that avoids polluting the global namespace. It can explicitly list its dependencies and get a handle on those dependencies without needing to refer to global objects, but instead receive the dependencies as arguments to the function that defines the module. -->
+    <center><em><h3>Concepts Used: Template Literal, multiple module definition within a script and module dependency.</h3> </em></center>
+    <center><h1>This content is rendered synchronously!</h1></center>
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <div id="output3"></div>
+    <div id="output4"></div>
+    <script data-main="js/home" src="require.js"></script> <!-- one entry point require.js and out of order async call -->
+    <!-- If you want to do require()calls in the HTML page, then it is best to not use data-main. data-main is only intended for use when the page just has one main entry point, the data-main script. For pages that want to do inline require() calls, it is best to nest those inside a require() call for the configuration. -->
+    <!-- <script src="jquery.js"></script> 
+        <script src="data.js"></script>
+        <script src="message.js"></script>
+        <script src="home.js"></script>
+        synchronous call of multiple js scripts -->
+</body>
+</html>
